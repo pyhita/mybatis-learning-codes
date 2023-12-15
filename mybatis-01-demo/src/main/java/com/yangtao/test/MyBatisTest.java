@@ -150,8 +150,9 @@ public class MyBatisTest {
     @Test
     public void testSelectCustomers() {
         CustomerMapper mapper = session.getMapper(CustomerMapper.class);
-
-        for (Customer customer : mapper.selectCustomerWithOrder()) {
+        List<Customer> customers = mapper.selectCustomerWithOrder();
+        System.out.println(customers.size());
+        for (Customer customer : customers) {
             System.out.println(customer);
         }
 

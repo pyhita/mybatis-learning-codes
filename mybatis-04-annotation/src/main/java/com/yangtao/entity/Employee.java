@@ -25,4 +25,16 @@ public class Employee {
         this.empName = empName;
         this.empSalary = empSalary;
     }
+
+    public Double getEmpSalary() {
+        return empSalary;
+    }
+
+    public Integer getEmpId() {
+        return empId;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
 }
