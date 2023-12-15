@@ -5,10 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mybatis-demos/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-02-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-01-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-03-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-04-annotation/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

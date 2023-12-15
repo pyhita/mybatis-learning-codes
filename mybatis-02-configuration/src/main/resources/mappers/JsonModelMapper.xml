@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace等于mapper接口类的全限定名,这样实现对应 -->
+<mapper namespace="com.yangtao.mapper.JsonModelMapper">
+
+  <resultMap id="jsonMap" type="jsonModel">
+    <id property="id" column="id"/>
+    <result property="testField" column="test_field"/>
+<!--    <result property="jsonModel" column="json_model"-->
+<!--      typeHandler="com.yangtao.handler.JsonTypeHandler"/>-->
+    <result property="jsonModel" column="json_model"
+      typeHandler="com.yangtao.handler.JsonTypeHandler"/>
+  </resultMap>
+
+
+  <select id="selectJsons" resultMap="jsonMap">
+    SELECT * FROM json_test
+  </select>
+
+</mapper>
