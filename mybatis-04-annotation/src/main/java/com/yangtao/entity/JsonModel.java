@@ -11,8 +11,8 @@ public class JsonModel {
 
     private Integer id;
 //    private JSONObject jsonModel;
-//    private String jsonModel;
-    private Person jsonModel;
+    private String jsonModel;
+//    private Person jsonModel;
     private String testField;
 
     @Data
