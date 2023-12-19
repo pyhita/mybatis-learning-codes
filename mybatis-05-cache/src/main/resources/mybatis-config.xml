@@ -36,8 +36,8 @@
         <!-- resource属性：指定Mapper映射文件的实际存储位置，这里需要使用一个以类路径根目录为基准的相对路径 -->
         <!--    对Maven工程的目录结构来说，resources目录下的内容会直接放入类路径，所以这里我们可以以resources目录为基准 -->
         <mapper resource="mapper/EmployeeMapper.xml"/>
-        <mapper resource="mapper/OrderMapper.xml"/>
-        <mapper resource="mapper/CustomerMapper.xml"/>
+<!--        <mapper resource="mapper/OrderMapper.xml"/>-->
+<!--        <mapper resource="mapper/CustomerMapper.xml"/>-->
 <!--        <package name="com.yangtao.mapper"/>-->
 <!--        <package name="com.yangtao.mapper"/>-->
     </mappers>

@@ -58,4 +58,9 @@
         SELECT emp_id, emp_name, emp_salary FROM t_emp
         WHERE emp_id = #{emp_id}
     </select>
+
+<!--    测试mybatis 多种传参方式-->
+    <select id="getEmpByIdAndName" resultType="employee">
+        SELECT * FROM t_emp WHERE emp_id = #{empId} AND emp_name = #{empName}
+    </select>
 </mapper>

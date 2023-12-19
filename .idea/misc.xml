@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/mybatis-01-demo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-03-mapper/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-04-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-05-cache/pom.xml" />
       </list>
     </option>
   </component>

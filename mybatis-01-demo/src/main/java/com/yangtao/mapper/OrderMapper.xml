@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace等于mapper接口类的全限定名,这样实现对应 -->
+<mapper namespace="com.yangtao.mapper.OrderMapper">
+
+  <resultMap id="orderMap" type="order">
+    <id column="order_id" property="orderId"/>
+    <result column="order_name" property="orderName"/>
+    <association property="customer" javaType="customer">
+      <id column="customer_id" property="customerId"/>
+      <result column="customer_name" property="customerName"/>
+    </association>
+  </resultMap>
+
+  <select id="selectOrderWithCustomer" resultMap="orderMap">
+    SELECT
+      order_id,
+      order_name,
+      c.customer_id,
+      customer_name
+    FROM t_order o
+    INNER JOIN t_customer c
+    ON  o.customer_id = c.customer_id
+  </select>
+</mapper>

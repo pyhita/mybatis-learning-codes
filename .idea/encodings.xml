@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/mybatis-04-annotation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-04-annotation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-05-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-05-cache/src/main/resources" charset="UTF-8" />
   </component>
 </project>

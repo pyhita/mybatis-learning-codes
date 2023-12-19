@@ -31,4 +31,8 @@ public interface EmployeeMapper {
 
     Employee selectEmployeeByRMResultMap(Integer emp_id);
 
+//    mybatis 传参方式 test
+    // 多个简单类型参数
+    Employee getEmpByIdAndName(@Param("empId") Integer empId, @Param("empName") String empName);
+
 }

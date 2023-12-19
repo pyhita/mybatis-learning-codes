@@ -12,11 +12,13 @@
 <!--      typeHandler="com.yangtao.handler.JsonTypeHandler"/>-->
     <result property="jsonModel" column="json_model"
       typeHandler="com.yangtao.handler.JsonTypeHandler"/>
+    <result property="enabled" column="enabled"
+      typeHandler="com.yangtao.handler.EnabledTypeHandler"/>
   </resultMap>
 
 
   <select id="selectJsons" resultMap="jsonMap">
-    SELECT * FROM json_test
+    SELECT * FROM t_typehandler
   </select>
 
 </mapper>

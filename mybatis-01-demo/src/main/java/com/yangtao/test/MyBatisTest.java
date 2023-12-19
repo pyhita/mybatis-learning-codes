@@ -24,12 +24,14 @@ import org.junit.jupiter.api.Test;
 public class MyBatisTest {
 
     private SqlSession session;
+    private EmployeeMapper employeeMapper;
 
     @BeforeEach
     public void buildSqlSession() throws Exception {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
         session = factory.openSession();
+        employeeMapper = session.getMapper(EmployeeMapper.class);
     }
 
 
@@ -90,6 +92,7 @@ public class MyBatisTest {
         System.out.println(map);
     }
 
+    // 测试insert
     @Test
     public void testInsertEmployee() throws Exception {
         // 1 创建sqlSessionFactory
@@ -107,6 +110,7 @@ public class MyBatisTest {
         session.close();
     }
 
+    // 测试update， 同时测试传参方式是map
     @Test
     public void testUpdateEmployee() throws Exception {
         // 1 创建sqlSessionFactory
@@ -128,6 +132,7 @@ public class MyBatisTest {
         session.close();
     }
 
+    // 测试resultMap使用
     @Test
     public void testSelectEmployeeByRMResultMap() throws Exception {
         EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
@@ -137,6 +142,7 @@ public class MyBatisTest {
     }
 
 
+    // 测试多对一 查询，结果映射
     @Test
     public void testSelectOrders() {
         OrderMapper orderMapper = session.getMapper(OrderMapper.class);
@@ -147,6 +153,7 @@ public class MyBatisTest {
         }
     }
 
+    // 测试一对多查询，结果映射
     @Test
     public void testSelectCustomers() {
         CustomerMapper mapper = session.getMapper(CustomerMapper.class);
@@ -159,4 +166,12 @@ public class MyBatisTest {
     }
 
 
+    // Mybatis 传参方式测试
+        // 多个简单类型参数
+    @Test
+    public void testSelectByIdAndName() {
+        Employee tom = employeeMapper.getEmpByIdAndName(1, "tom");
+
+        System.out.println(tom);
+    }
 }
