@@ -28,6 +28,7 @@
             javaType="com.yangtao.entity.Department" jdbcType="VARCHAR"/>
         <typeHandler handler="com.yangtao.handler.JsonTypeHandler"
             javaType="string" jdbcType="VARCHAR"/>
+        <typeHandler handler="com.yangtao.handler.GenderTypeHandler"/>
     </typeHandlers>
 
     <!-- environments表示配置Mybatis的开发环境，可以配置多个环境，在众多具体环境中，使用default属性指定实际运行时使用的环境。default属性的取值是environment标签的id属性的值。 -->

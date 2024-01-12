@@ -1,5 +1,6 @@
 package com.yangtao.entity;
 
+import com.yangtao.contanst.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,8 @@ public class Employee {
     private String empName;
 
     private Double empSalary;
+
+    private Gender empGender;
 
     //getter | setter
 

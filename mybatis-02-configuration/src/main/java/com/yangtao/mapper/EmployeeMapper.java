@@ -14,5 +14,6 @@ public interface EmployeeMapper {
 
 
     @Select("SELECT * FROM t_emp")
+    // @Result(column = "emp_gender", property = "empGender", typeHandler = GenderTypeHandler.class, javaType = Gender.class)
     List<Employee> selectEmployees();
 }

@@ -35,9 +35,9 @@ public class MyTest {
         EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
         List<Employee> employees = employeeMapper.selectEmployees();
 
-//        for (Employee employee : employees) {
-//            System.out.println(employee);
-//        }
+       for (Employee employee : employees) {
+           System.out.println(employee);
+       }
     }
 
     @Test
